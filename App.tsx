@@ -1,19 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View } from 'react-native';
+import { Provider as PaperProvider } from 'react-native-paper'
+import theme from './src/theme/basePaperTheme'
+import RootNavigator from './src/navigation/RootNavigation'
 
-export default function App() {
+const App = () => {
   return (
-    <View style={styles.container}>
-      <StatusBar style="auto" />
-    </View>
+    <PaperProvider theme={theme}>
+        <RootNavigator />
+    </PaperProvider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App
+
