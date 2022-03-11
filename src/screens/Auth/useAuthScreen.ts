@@ -1,6 +1,9 @@
 import React, {useEffect, useCallback, useState} from 'react'
 import { useStyles } from "./styles"
 import { useTheme } from 'react-native-paper'
+import { useAppDispatch } from '../../utils/hooks/useStore'
+import { setAuthData } from '../../store/auth/authSlice'
+import { login, signup } from '../../services/DataServices/authentication'
 
 export const useAuthScreen = () => {
 
@@ -12,6 +15,7 @@ export const useAuthScreen = () => {
     const [isPasswordVisible, setIsPasswordVisible] = useState(true)
     const [emailError, setEmailError] = useState(false)
     const [passwordError, setPasswordError] = useState(false)
+    const dispatch = useAppDispatch()
 
     const handleEmailChange = (text: string) => {
         setEmailError(false);
@@ -39,8 +43,14 @@ export const useAuthScreen = () => {
         handleAuth(emailInput, passwordInput);
     }
 
-    const handleAuth = (email: string, password: string) => {
-        console.log('login', password, email)
+    const handleAuth = async(email: string, password: string) => {
+        let token = null
+        if (isLogin) {
+            token = await login(email, password)
+        } else {
+            token = await signup(email, password)
+        }
+        dispatch(setAuthData({token}))
     }
 
     return {
