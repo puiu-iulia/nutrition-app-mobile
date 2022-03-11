@@ -1,13 +1,24 @@
 import React, { useState } from "react"
 import { Text, KeyboardAvoidingView, View, Platform } from 'react-native'
 import { useTheme, TextInput, Button } from "react-native-paper"
-import { useStyles } from "./styles"
+import { useAuthScreen } from "./useAuthScreen"
 
 const AuthScreen = () => {
 
-    const theme = useTheme()
-    const styles = useStyles(theme)
-    const [email, setEmail] = useState('')
+    const { 
+        styles, 
+        email, 
+        handleEmailChange, 
+        password, 
+        handlePasswordChange, 
+        isLogin, 
+        setIsLogin,
+        isPasswordVisible,
+        setIsPasswordVisible,
+        emailError,
+        passwordError,
+        handleAuthValidation
+    } = useAuthScreen()
 
     return (
         <KeyboardAvoidingView 
@@ -21,36 +32,54 @@ const AuthScreen = () => {
                         label={"Email"}
                         mode="outlined"
                         value={email}
-                        onChangeText={setEmail}
+                        onChangeText={handleEmailChange}
                         keyboardType="email-address"
                         style={styles.input}
+                        error={emailError}
                     />
+                    <View style={styles.errorTextContainer}>
+                        {emailError ? (
+                        <Text style={styles.errorText}>Enter a valid email.</Text>
+                        ) : null}
+                    </View>
                     <TextInput 
                         label={"Password"}
-                        value={email}
+                        value={password}
                         mode="outlined"
-                        onChangeText={setEmail}
-                        secureTextEntry={true}
+                        onChangeText={handlePasswordChange}
+                        secureTextEntry={isPasswordVisible}
+                        error={passwordError}
                         style={styles.input}
                         right={<TextInput.Icon
-                            name="eye"
+                            name={isPasswordVisible ? "eye" : "eye-off"}
                             color={'#505050'}
-                            onPress={() => {}}
+                            onPress={() => setIsPasswordVisible(!isPasswordVisible)}
                         />}
-                    ></TextInput>
+                    />
+                    <View style={styles.errorTextContainer}>
+                        {passwordError ? (
+                        <Text style={styles.errorText}>Password must be at least 8 characters long.</Text>
+                        ) : null}
+                    </View>
                     <View style={styles.switchContainer}>
-                        <Text>Already have an account?</Text>
+                        <Text>
+                            {!isLogin 
+                            ? 'Already have an account?' 
+                            : 'Don\'t have an account?'}
+                        </Text>
                         <Button
                             mode="text" 
                             dark={false}
-                        >Login</Button>
+                            onPress={() => setIsLogin(!isLogin)}
+                        >{!isLogin ? 'Login' : 'Sign up'}</Button>
                     </View>
                     <Button
                         mode="contained" 
                         style={styles.button}
                         dark={true}
                         color='#fff'
-                    >Create account</Button>
+                        onPress={handleAuthValidation}
+                    >{isLogin ? 'Login' : 'Sign up'}</Button>
                 </View>
             </View>
         </KeyboardAvoidingView>

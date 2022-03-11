@@ -8,7 +8,11 @@ const theme = {
         primaryLight: '#A1CF6B',
         secondary: '#D5D887',
         secondaryLight: '#E0C879',
-        accent: '#E87461'
+        accent: '#E87461',
+        error: '#E87461'
+    },
+    customColors: {
+        primaryLight: '#A1CF6B',
     }
 }
 

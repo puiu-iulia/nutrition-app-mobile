@@ -14,7 +14,7 @@ export const useStyles = (props?: Theme) =>
             alignContent: 'center'
         },
         input: {
-            marginBottom: 16
+            marginTop: 8
         },
         inputViewContainer: {
             flex: 1,
@@ -38,5 +38,12 @@ export const useStyles = (props?: Theme) =>
             fontFamily: 'notoserif',
             alignSelf: 'center',
             fontWeight: '700'
-        }
+        },
+        errorTextContainer: {
+            height: 20,
+            marginVertical: 4
+        },
+        errorText: {
+            color: props?.colors.error,
+        },
     })
