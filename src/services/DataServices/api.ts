@@ -1,1 +1,1 @@
-export const baseUrl = 'http://86.126.141.27:8000/api/'
+export const baseUrl = 'http://f4bc-93-122-251-2.ngrok.io/api/'

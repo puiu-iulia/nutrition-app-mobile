@@ -1,6 +1,8 @@
 const routes = {
     AuthStack: 'AuthStack',
-    AuthScreen: 'AuthScreen'
+    AuthScreen: 'AuthScreen',
+    RecipesTab: 'RecipeScreen',
+    MainStack: 'MainStack'
 }
 
 export default routes

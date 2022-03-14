@@ -1,7 +1,9 @@
-import React, { useState } from "react"
+import React, { useEffect } from "react"
 import { Text, KeyboardAvoidingView, View, Platform } from 'react-native'
-import { useTheme, TextInput, Button } from "react-native-paper"
+import { useTheme, TextInput, Button, ActivityIndicator } from "react-native-paper"
 import { useAuthScreen } from "./useAuthScreen"
+import { colors } from "../../theme/generalColors"
+import helpers from "../../theme/helpers"
 
 const AuthScreen = () => {
 
@@ -17,8 +19,18 @@ const AuthScreen = () => {
         setIsPasswordVisible,
         emailError,
         passwordError,
-        handleAuthValidation
+        handleAuthValidation,
+        tryAuth,
+        isLoading
     } = useAuthScreen()
+
+    useEffect(() => {
+        tryAuth()
+    }, [])
+
+    if (isLoading) {
+        return <View style={[helpers.fillCenter]}><ActivityIndicator animating={true} color={colors.primaryLight} /></View>
+    }
 
     return (
         <KeyboardAvoidingView 

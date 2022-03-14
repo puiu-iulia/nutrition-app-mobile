@@ -10,7 +10,8 @@ export const saveKey = async (key: string, value: any) => {
 
 export const getKey = async (key: string) => {
     try {
-        await SecureStore.getItemAsync(key)
+        const storeData = await SecureStore.getItemAsync(key)
+        return storeData
     } catch (e) {
         console.log('Secure store get error', e)
     }

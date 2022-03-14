@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native"
+import { StyleSheet, Platform } from "react-native"
 import { Theme } from "react-native-paper/lib/typescript/types"
 import helpers from "../../theme/helpers"
 
@@ -35,7 +35,7 @@ export const useStyles = (props?: Theme) =>
             marginTop: 48,
             fontSize: 48,
             color: props?.colors.primary,
-            fontFamily: 'notoserif',
+            fontFamily: Platform.OS == 'android' ? 'notoserif' : 'Georgia-Bold',
             alignSelf: 'center',
             fontWeight: '700'
         },
