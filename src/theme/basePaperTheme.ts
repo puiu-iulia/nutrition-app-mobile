@@ -9,7 +9,8 @@ const theme = {
         secondary: '#D5D887',
         secondaryLight: '#E0C879',
         accent: '#E87461',
-        error: '#E87461'
+        error: '#E87461',
+        white: '#fff'
     },
     customColors: {
         primaryLight: '#A1CF6B',
