@@ -5,7 +5,7 @@ import { saveKey } from "../LocalStorage/secureStore"
 export const signup = async (email: string, password: string) => {
 
     try {
-        const response = await fetch(baseUrl + 'user/create/', 
+        const response = await fetch(baseUrl + 'users/create/', 
             {
                 method: 'POST',
                 headers: {
@@ -26,7 +26,7 @@ export const signup = async (email: string, password: string) => {
 export const login = async (email: string, password: string) => {
 
     try {
-        const response = await fetch(baseUrl + 'user/token/', 
+        const response = await fetch(baseUrl + 'users/token/', 
             {
                 method: 'POST',
                 headers: {
