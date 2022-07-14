@@ -11,7 +11,6 @@ const RootStack = createNativeStackNavigator()
 const RootNavigator = () => {
 
     const token = useAppSelector(state => state.auth.token)
-    console.log('token', token)
 
     return (
         <NavigationContainer>

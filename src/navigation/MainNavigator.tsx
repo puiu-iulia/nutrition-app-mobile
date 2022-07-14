@@ -1,67 +1,55 @@
+import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
+import { useLayoutEffect } from "react"
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
-import RecipeScreen from "../screens/Recipes/RecipeScreen"
+import RecipeScreen from "../screens/Recipes/AllRecipes/RecipeScreen"
 import routes from "./routes"
 import { useTheme } from "react-native-paper"
 import MealPlannerScreen from "../screens/MealPlanner/MealPlannerScreen"
 import ShoppingListScreen from "../screens/Shopping/ShoppingListScreen"
-
-const MainStack = createNativeStackNavigator()
+import AddRecipeScreen from '../screens/Recipes/AddRecipe/AddRecipeScreen';
 
 const Tab = createMaterialBottomTabNavigator()
 
-const BottomTabs = () => {
+const Main = createNativeStackNavigator()
+
+const TabsNavigator = () => {
+
     const { colors } = useTheme();
     return (
         <Tab.Navigator 
             barStyle={{ backgroundColor: colors.primary, height: 64 }}
             activeColor={'#fff'}
         >
-        <Tab.Screen
-            name='Meal PLanner'
-            options={{ tabBarIcon: 'calendar' }}
-            component={MealPlannerScreen}
-        />
-        <Tab.Screen
-            name='Recipes'
-            options={{ tabBarIcon: 'food-variant' }}
-            component={RecipeScreen}
-        />
-        <Tab.Screen
-            name='Shopping List'
-            options={{ tabBarIcon: 'format-list-checkbox' }}
-            component={ShoppingListScreen}
-        />
-      </Tab.Navigator>
+            <Tab.Screen
+                name='Meal PLanner'
+                options={{ tabBarIcon: 'calendar' }}
+                component={MealPlannerScreen}
+            />
+            <Tab.Screen
+                name='Recipes'
+                options={{ tabBarIcon: 'food-variant'}}
+                component={RecipeScreen}
+            />
+            <Tab.Screen
+                name='Shopping List'
+                options={{ tabBarIcon: 'format-list-checkbox' }}
+                component={ShoppingListScreen}
+            />
+        </Tab.Navigator>
     );
-  };
+};
 
 const MainNavigator = () => {
     return (
-        <MainStack.Navigator 
-            screenOptions={{
-                headerShown: false,
-            }}
-        >
-            <MainStack.Group>
-                <MainStack.Screen name={routes.RecipesTab} component={BottomTabs} />
-            </MainStack.Group>
-            <MainStack.Group>
-                <MainStack.Screen
-                    name='MealPLanner'
-                    component={MealPlannerScreen}
-                />
-                <MainStack.Screen
-                    name='Recipes'
-                    component={RecipeScreen}
-                />
-                <MainStack.Screen
-                    name='ShoppingList'
-                    component={ShoppingListScreen}
-                />
-            </MainStack.Group>
-        </MainStack.Navigator>
+        <Main.Navigator screenOptions={{
+            headerShown: false,
+        }}>
+            <Main.Screen name='Dashboard' component={TabsNavigator} />
+            <Main.Screen name={routes.AddRecipeScreen} component={AddRecipeScreen} />
+        </Main.Navigator>
     )
+  
 }
 
 export default MainNavigator
