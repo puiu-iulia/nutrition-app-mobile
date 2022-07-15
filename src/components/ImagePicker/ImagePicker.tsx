@@ -7,7 +7,11 @@ import { colors } from '../../theme/generalColors'
 import { useStyles } from './styles'
 import { useTheme } from 'react-native-paper'
 
-export const MyImagePicker = ({onSubmit}) => {
+interface IImagePicker {
+    onSubmit: (arg0: any) => void
+}
+
+export const MyImagePicker = ({onSubmit} : IImagePicker) => {
     const [image, setImage] = useState('')
     const theme = useTheme()
     const styles = useStyles(theme)
@@ -27,6 +31,7 @@ export const MyImagePicker = ({onSubmit}) => {
     
         if (!result.cancelled) {
           setImage(result.uri);
+          onSubmit(result)
         }
       };
 
