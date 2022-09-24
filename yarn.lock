@@ -2919,6 +2919,19 @@
     "setimmediate" "^1.0.5"
     "ua-parser-js" "^0.7.30"
 
+"fbjs@^0.8.9":
+  "integrity" "sha512-EQaWFK+fEPSoibjNy8IxUtaFOMXcWsY0JaVrQoZR9zC8N2Ygf9iDITPWjUTVIax95b6I742JFLqASHfsag/vKA=="
+  "resolved" "https://registry.npmjs.org/fbjs/-/fbjs-0.8.18.tgz"
+  "version" "0.8.18"
+  dependencies:
+    "core-js" "^1.0.0"
+    "isomorphic-fetch" "^2.1.1"
+    "loose-envify" "^1.0.0"
+    "object-assign" "^4.1.0"
+    "promise" "^7.1.1"
+    "setimmediate" "^1.0.5"
+    "ua-parser-js" "^0.7.30"
+
 "fbjs@^3.0.0":
   "integrity" "sha512-ucV0tDODnGV3JCnnkmoszb5lf4bNpzjv80K41wd4k798Etq+UYD0y0TIfalLjZoKgjive6/adkRnszwapiDgBQ=="
   "resolved" "https://registry.npmjs.org/fbjs/-/fbjs-3.0.4.tgz"
@@ -3082,6 +3095,11 @@
   "resolved" "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz"
   "version" "1.0.0"
 
+"fs@^0.0.1-security":
+  "integrity" "sha512-3XY9e1pP0CVEUCdj5BmfIZxRBTSDycnbqhIOGec9QYtmVH2fbLpj86CFWkrNOkt/Fvty4KZG5lTglL9j/gJ87w=="
+  "resolved" "https://registry.npmjs.org/fs/-/fs-0.0.1-security.tgz"
+  "version" "0.0.1-security"
+
 "fsevents@^2.1.2":
   "integrity" "sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA=="
   "resolved" "https://registry.npmjs.org/fsevents/-/fsevents-2.3.2.tgz"
@@ -3234,7 +3252,7 @@
   dependencies:
     "source-map" "^0.7.3"
 
-"hoist-non-react-statics@^3.0.0", "hoist-non-react-statics@^3.3.0", "hoist-non-react-statics@^3.3.2":
+"hoist-non-react-statics@^3.0.0", "hoist-non-react-statics@^3.3.0", "hoist-non-react-statics@^3.3.1", "hoist-non-react-statics@^3.3.2":
   "integrity" "sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw=="
   "resolved" "https://registry.npmjs.org/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz"
   "version" "3.3.2"
@@ -3273,6 +3291,11 @@
   "integrity" "sha512-lk7UNmSbAukB5B6dh9fnh5D0bJTOFKxVg2cyJWTYrWRfhLrLMBquONcUs3aFq507hNoIZEDDh8lb8UtOizSMhA=="
   "resolved" "https://registry.npmjs.org/immer/-/immer-9.0.12.tgz"
   "version" "9.0.12"
+
+"immutable@^4.0.0-rc.12":
+  "integrity" "sha512-oNkuqVTA8jqG1Q6c+UglTOD1xhC1BtjKI7XkCXRkZHrN5m18/XsnUp8Q89GkQO/z+0WjonSvl0FLhDYftp46nQ=="
+  "resolved" "https://registry.npmjs.org/immutable/-/immutable-4.1.0.tgz"
+  "version" "4.1.0"
 
 "import-fresh@^2.0.0":
   "integrity" "sha1-2BNVwVYS04bGH53dOSLUMEgipUY="
@@ -3782,7 +3805,7 @@
   "resolved" "https://registry.npmjs.org/lodash._reinterpolate/-/lodash._reinterpolate-3.0.0.tgz"
   "version" "3.0.0"
 
-"lodash.debounce@^4.0.8":
+"lodash.debounce@^4.0.8", "lodash.debounce@4.0.8":
   "integrity" "sha1-gteb/zCmfEAF/9XiUVMArZyk168="
   "resolved" "https://registry.npmjs.org/lodash.debounce/-/lodash.debounce-4.0.8.tgz"
   "version" "4.0.8"
@@ -3900,6 +3923,11 @@
   "version" "3.2.3"
   dependencies:
     "buffer-alloc" "^1.1.0"
+
+"memoize-one@^5.2.1":
+  "integrity" "sha512-zYiwtZUcYyXKo/np96AGZAckk+FWWsUdJ3cHGGmld7+AhvcWmQyGCYUh1hc4Q/pkOhb65dQR/pqCyK0cOaHz4Q=="
+  "resolved" "https://registry.npmjs.org/memoize-one/-/memoize-one-5.2.1.tgz"
+  "version" "5.2.1"
 
 "merge-stream@^2.0.0":
   "integrity" "sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w=="
@@ -4267,6 +4295,11 @@
   dependencies:
     "minimist" "^1.2.5"
 
+"moment@^2.24.0", "moment@^2.29.4", "moment@>=2.0.0":
+  "integrity" "sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w=="
+  "resolved" "https://registry.npmjs.org/moment/-/moment-2.29.4.tgz"
+  "version" "2.29.4"
+
 "ms@2.0.0":
   "integrity" "sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g="
   "resolved" "https://registry.npmjs.org/ms/-/ms-2.0.0.tgz"
@@ -4354,6 +4387,11 @@
   "version" "2.6.7"
   dependencies:
     "whatwg-url" "^5.0.0"
+
+"node-git-hooks@^1.0.1":
+  "integrity" "sha512-ZTiTpRm16kxZY3JQugqjtm1u6nRt0cF2IH8lTMbiyv1V0qUA6ao8yHBwu4p58s3Ry+DbrlXOgUR4b4o/KzjWAA=="
+  "resolved" "https://registry.npmjs.org/node-git-hooks/-/node-git-hooks-1.0.6.tgz"
+  "version" "1.0.6"
 
 "node-int64@^0.4.0":
   "integrity" "sha1-h6kGXNs1XTGC2PlM4RGIuCXGijs="
@@ -4684,7 +4722,7 @@
     "kleur" "^3.0.3"
     "sisteransi" "^1.0.5"
 
-"prop-types@^15.6.0", "prop-types@^15.7.2":
+"prop-types@^15.5.10", "prop-types@^15.6.0", "prop-types@^15.7.2":
   "integrity" "sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg=="
   "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
   "version" "15.8.1"
@@ -4692,6 +4730,13 @@
     "loose-envify" "^1.4.0"
     "object-assign" "^4.1.1"
     "react-is" "^16.13.1"
+
+"prop-types@15.5.8":
+  "integrity" "sha512-QiDx7s0lWoAVxmEmOYnn3rIZGduup2PZgj3rta5O5y0NfPKu3ApWi+GdMfTto7PmO/5+p4yamSLMZkj0jaTL4A=="
+  "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.5.8.tgz"
+  "version" "15.5.8"
+  dependencies:
+    "fbjs" "^0.8.9"
 
 "pump@^3.0.0":
   "integrity" "sha512-LwZy+p3SFs1Pytd/jYct4wpv49HiYCqd9Rlc5ZVdk0V+8Yzv6jR5Blk3TRmPL1ft69TxP0IMZGJ+WPFU2BFhww=="
@@ -4763,6 +4808,32 @@
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-17.0.2.tgz"
   "version" "17.0.2"
 
+"react-native-calendar-picker@^7.1.2":
+  "integrity" "sha512-n5ngdqbMIUeu2iHYxvKSX5u67wWqPYdhTx9sMjjQsjF6BrStxF65JCJSPaAORxD+wbFI5AK/xKDCFJfA0o1uFQ=="
+  "resolved" "https://registry.npmjs.org/react-native-calendar-picker/-/react-native-calendar-picker-7.1.2.tgz"
+  "version" "7.1.2"
+  dependencies:
+    "node-git-hooks" "^1.0.1"
+    "prop-types" "^15.6.0"
+    "recyclerlistview" "^3.0.0"
+
+"react-native-calendars@^1.1285.0":
+  "integrity" "sha512-aYLljw8GyztZ9RDrXDAXLkYsJjzqkzQESap5GBjTrO/xaJhPlmq4NaOG4qjgWo1hnjIirDPByiHm2lqsDXg27A=="
+  "resolved" "https://registry.npmjs.org/react-native-calendars/-/react-native-calendars-1.1285.0.tgz"
+  "version" "1.1285.0"
+  dependencies:
+    "fs" "^0.0.1-security"
+    "hoist-non-react-statics" "^3.3.1"
+    "immutable" "^4.0.0-rc.12"
+    "lodash" "^4.17.15"
+    "memoize-one" "^5.2.1"
+    "prop-types" "^15.5.10"
+    "react-native-swipe-gestures" "^1.0.5"
+    "recyclerlistview" "^3.0.5"
+    "xdate" "^0.8.0"
+  optionalDependencies:
+    "moment" "^2.24.0"
+
 "react-native-codegen@^0.0.6":
   "integrity" "sha512-cMvrUelD81wiPitEPiwE/TCNscIVauXxmt4NTGcy18HrUd0WRWXfYzAQGXm0eI87u3NMudNhqFj2NISJenxQHg=="
   "resolved" "https://registry.npmjs.org/react-native-codegen/-/react-native-codegen-0.0.6.tgz"
@@ -4799,6 +4870,11 @@
     "react-freeze" "^1.0.0"
     "warn-once" "^0.1.0"
 
+"react-native-swipe-gestures@^1.0.5":
+  "integrity" "sha512-Ns7Bn9H/Tyw278+5SQx9oAblDZ7JixyzeOczcBK8dipQk2pD7Djkcfnf1nB/8RErAmMLL9iXgW0QHqiII8AhKw=="
+  "resolved" "https://registry.npmjs.org/react-native-swipe-gestures/-/react-native-swipe-gestures-1.0.5.tgz"
+  "version" "1.0.5"
+
 "react-native-vector-icons@*", "react-native-vector-icons@^9.2.0", "react-native-vector-icons@>= 6.0.0":
   "integrity" "sha512-wKYLaFuQST/chH3AJRjmOLoLy3JEs1JR6zMNgTaemFpNoXs0ztRnTxcxFD9xhX7cJe1/zoN5BpQYe7kL0m5yyA=="
   "resolved" "https://registry.npmjs.org/react-native-vector-icons/-/react-native-vector-icons-9.2.0.tgz"
@@ -4820,7 +4896,7 @@
     "normalize-css-color" "^1.0.2"
     "prop-types" "^15.6.0"
 
-"react-native@*", "react-native@>=0.42.0", "react-native@>=0.64.0-rc.0 || 0.0.0-*", "react-native@0.64.3":
+"react-native@*", "react-native@>= 0.30.0", "react-native@>=0.42.0", "react-native@>=0.64.0-rc.0 || 0.0.0-*", "react-native@0.64.3":
   "integrity" "sha512-2OEU74U0Ek1/WeBzPbg6XDsCfjF/9fhrNX/5TFgEiBKd5mNc9LOZ/OlMmkb7iues/ZZ/oc51SbEfLRQdcW0fVw=="
   "resolved" "https://registry.npmjs.org/react-native/-/react-native-0.64.3.tgz"
   "version" "0.64.3"
@@ -4875,7 +4951,7 @@
   "resolved" "https://registry.npmjs.org/react-refresh/-/react-refresh-0.4.3.tgz"
   "version" "0.4.3"
 
-"react@*", "react@^16.8.0 || ^17.0.0", "react@^16.8.3 || ^17", "react@^16.9.0 || ^17.0.0 || 18.0.0-beta", "react@^17.0.0", "react@>= 16.8.0", "react@>=16.3.0", "react@>=17.0.1", "react@17.0.1":
+"react@*", "react@^16.8.0 || ^17.0.0", "react@^16.8.3 || ^17", "react@^16.9.0 || ^17.0.0 || 18.0.0-beta", "react@^17.0.0", "react@>= 15.2.1", "react@>= 16.8.0", "react@>=16.3.0", "react@>=17.0.1", "react@17.0.1":
   "integrity" "sha512-lG9c9UuMHdcAexXtigOZLX8exLWkW0Ku29qPRU8uhF2R9BN96dLCt0psvzPLlHc5OWkgymP3qwTRgbnw5BKx3w=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.1.tgz"
   "version" "17.0.1"
@@ -4912,6 +4988,15 @@
   "version" "0.6.2"
   dependencies:
     "resolve" "^1.1.6"
+
+"recyclerlistview@^3.0.0", "recyclerlistview@^3.0.5":
+  "integrity" "sha512-JVHz13u520faEsbVqFrJOMuJjc4mJlOXODe5QdqAJHdl5/IpyYeo83uiHrpzxyLb8QtJ0889JMlDik+Z1Ed0QQ=="
+  "resolved" "https://registry.npmjs.org/recyclerlistview/-/recyclerlistview-3.0.5.tgz"
+  "version" "3.0.5"
+  dependencies:
+    "lodash.debounce" "4.0.8"
+    "prop-types" "15.5.8"
+    "ts-object-utils" "0.0.5"
 
 "redux-thunk@^2.4.1":
   "integrity" "sha512-OOYGNY5Jy2TWvTL1KgAlVy6dcx3siPJ1wTq741EPyUKfn6W6nChdICjZwCd0p8AZBs5kWpZlbkXW2nE/zjUa+Q=="
@@ -5649,6 +5734,11 @@
   "resolved" "https://registry.npmjs.org/ts-interface-checker/-/ts-interface-checker-0.1.13.tgz"
   "version" "0.1.13"
 
+"ts-object-utils@0.0.5":
+  "integrity" "sha512-iV0GvHqOmilbIKJsfyfJY9/dNHCs969z3so90dQWsO1eMMozvTpnB1MEaUbb3FYtZTGjv5sIy/xmslEz0Rg2TA=="
+  "resolved" "https://registry.npmjs.org/ts-object-utils/-/ts-object-utils-0.0.5.tgz"
+  "version" "0.0.5"
+
 "tslib@^2.0.1":
   "integrity" "sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw=="
   "resolved" "https://registry.npmjs.org/tslib/-/tslib-2.3.1.tgz"
@@ -5919,6 +6009,11 @@
   dependencies:
     "simple-plist" "^1.1.0"
     "uuid" "^7.0.3"
+
+"xdate@^0.8.0":
+  "integrity" "sha512-sNBlLfOC8S3V0vLDEUianQOXcTsc9j4lfeKU/klHe0RjHAYn0CXsSttumTot8dzalboV8gZbH38B+WcCIBjhFQ=="
+  "resolved" "https://registry.npmjs.org/xdate/-/xdate-0.8.2.tgz"
+  "version" "0.8.2"
 
 "xml2js@0.4.23":
   "integrity" "sha512-ySPiMjM0+pLDftHgXY4By0uswI3SPKLDw/i3UXbnO8M/p28zqexCUoPmQFrYD+/1BzhGJSs2i1ERWKJAtiLrug=="
