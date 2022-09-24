@@ -6,6 +6,7 @@ export const useStyles = (props?: Theme) =>
         mainView: {
             padding: 8,
             flex: 1,
+            justifyContent: 'space-between'
         },
         screen: {
             flex: 1,
@@ -15,7 +16,8 @@ export const useStyles = (props?: Theme) =>
         },
         input: {
             marginBottom: 8,
-            height: 48
+            height: 48,
+            justifyContent: 'center'
         },
         inputDescirption: {
             height: 80,

@@ -1,12 +1,13 @@
 import { StyleSheet } from "react-native"
 import { Theme } from "react-native-paper/lib/typescript/types"
-import { Platform } from "react-native"
+import { Dimensions } from "react-native"
 import { colors } from "../../theme/generalColors"
 
 export const useStyles = (props?: Theme) => 
     StyleSheet.create({
         mainView: {
-            flex: 1,
+            // width: Dimensions.get('window').width,
+            // height: Dimensions.get('window').width,
             alignItems: 'center',
             justifyContent: 'center',
             backgroundColor: colors.greyLightest,
@@ -16,20 +17,20 @@ export const useStyles = (props?: Theme) =>
             overflow: 'hidden'
         },
         buttonView: {
-            height: 184,
-            width: '100%',
+            width: Dimensions.get('window').width,
+            height: Dimensions.get('window').width,
             alignItems: 'center',
             justifyContent: 'center',
         },
         imageView: {
-            height: 216,
-            width: '100%',
+            width: Dimensions.get('window').width,
+            height: Dimensions.get('window').width + 48,
             alignItems: 'center',
             justifyContent: 'center',
         },
         image: {
             width: '100%', 
-            height: 184
+            height: '85%'
         },
         buttonsView: {
             flex: 1,

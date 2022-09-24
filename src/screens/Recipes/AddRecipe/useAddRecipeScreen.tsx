@@ -35,30 +35,36 @@ export const useAddRecipeScreen = () => {
     const [tag, setTag] = useState('')
     const [ingredients, setIngredients] = useState([])
     const [tags, setTags] = useState([])
-    const [image, setImage] = useState()
+    const [image, setImage] = useState('')
+    const [index, setIndex] = useState(0)
 
     const onSave = async () => {
-        if (token) {
-            const resCreateRecipe = await createRecipe(token, {
-                title,
-                // description,
-                // time_minutes: 0,
-                // link,
-                // steps,
-                // ingredients,
-                // tags
-            })
-            if (resCreateRecipe.id && image) {
-                const resUploadImage = await uploadImageToRecipe(token, image, resCreateRecipe.id)
-                console.log('resUploadImage', resUploadImage)
-                if (resUploadImage) {
-                    goBack()
+        if (index < 4) {
+            setIndex(index+1)
+        } else {
+            if (token) {
+                const resCreateRecipe = await createRecipe(token, {
+                    title,
+                    // description,
+                    // time_minutes: 0,
+                    // link,
+                    // steps,
+                    // ingredients,
+                    // tags
+                })
+                if (resCreateRecipe.id && image) {
+                    const resUploadImage = await uploadImageToRecipe(token, image, resCreateRecipe.id)
+                    console.log('resUploadImage', resUploadImage)
+                    if (resUploadImage) {
+                        goBack()
+                    }
                 }
+                //console.log('res create recipe', resCreateRecipe)
             }
-            //console.log('res create recipe', resCreateRecipe)
         }
-      
     }
+
+    //TODO: Handle on skip & on next and add validation
 
     return {
         goToAddRecipe,
@@ -82,6 +88,8 @@ export const useAddRecipeScreen = () => {
         ingredients,
         tags,
         onSave,
-        setImage
+        setImage,
+        index,
+        setIndex
     }
 }
