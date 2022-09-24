@@ -16,22 +16,22 @@ export const MyImagePicker = ({onSubmit} : IImagePicker) => {
     const theme = useTheme()
     const styles = useStyles(theme)
 
-    console.log(image)
+    //console.log(image)
 
     const pickImage = async () => {
         // No permissions request is necessary for launching the image library
         let result = await ImagePicker.launchImageLibraryAsync({
           mediaTypes: ImagePicker.MediaTypeOptions.All,
           allowsEditing: true,
-          aspect: [4, 3],
+          aspect: [4, 4],
           quality: 1,
         });
     
-        console.log(result);
+        //console.log(result);
     
         if (!result.cancelled) {
           setImage(result.uri);
-          onSubmit(result)
+          onSubmit(result.uri)
         }
       };
 
