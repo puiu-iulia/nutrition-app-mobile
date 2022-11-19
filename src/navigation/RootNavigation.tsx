@@ -21,7 +21,8 @@ const RootNavigator = () => {
             >
                 { token 
                     ? <RootStack.Screen name={routes.MainStack} component={MainNavigator}/>
-                    : <RootStack.Screen name={routes.AuthStack} component={AuthNavigator}/>
+                    : 
+                    <RootStack.Screen name={routes.AuthStack} component={AuthNavigator}/>
                 } 
             </RootStack.Navigator>
         </NavigationContainer>

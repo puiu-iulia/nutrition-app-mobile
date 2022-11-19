@@ -39,9 +39,9 @@ export const useAddRecipeScreen = () => {
     const [index, setIndex] = useState(0)
 
     const onSave = async () => {
-        if (index < 4) {
-            setIndex(index+1)
-        } else {
+        // if (index < 4) {
+        //     setIndex(index+1)
+        // } else {
             if (token) {
                 const resCreateRecipe = await createRecipe(token, {
                     title,
@@ -52,6 +52,7 @@ export const useAddRecipeScreen = () => {
                     // ingredients,
                     // tags
                 })
+                console.log('image', image)
                 if (resCreateRecipe.id && image) {
                     const resUploadImage = await uploadImageToRecipe(token, image, resCreateRecipe.id)
                     console.log('resUploadImage', resUploadImage)
@@ -61,7 +62,7 @@ export const useAddRecipeScreen = () => {
                 }
                 //console.log('res create recipe', resCreateRecipe)
             }
-        }
+        // }
     }
 
     //TODO: Handle on skip & on next and add validation

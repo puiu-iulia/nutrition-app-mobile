@@ -145,14 +145,26 @@ const AddRecipeScreen = () => {
             leftButtonAction={goBack}
         >
             <View style={styles.mainView} >
-                    <FormView />
-                    <View>
-                        <Button 
-                            onPress={onSave}
-                            mode='contained'
-                            style={{marginBottom: 24}}
-                        >{index < 4 ? 'Next' : 'Save'}</Button>
-                    </View>
+                <View>
+                    <TextInput 
+                        label={"Title"}
+                        mode="outlined"
+                        value={title}
+                        onChangeText={setTitle}
+                        keyboardType="email-address"
+                        style={styles.input}
+                    />
+                    <MyImagePicker 
+                        onSubmit={(file: string) => {setImage(file)}}
+                />
+                </View>
+                <View>
+                    <Button 
+                        onPress={onSave}
+                        mode='contained'
+                        style={{marginBottom: 24}}
+                    >{'Save'}</Button>
+                </View>
             </View>
         </Screen>
     )

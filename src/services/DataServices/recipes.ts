@@ -1,3 +1,4 @@
+import { requestCameraPermissionsAsync } from "expo-image-picker"
 import { baseUrl } from "./api"
 
 export const createRecipe = async (token: string, recipe: any) => {
@@ -23,12 +24,11 @@ export const createRecipe = async (token: string, recipe: any) => {
 
 export const uploadImageToRecipe = async (token: string, image: any, recipeId: string) => {
     const formData = new FormData()
-
     formData.append('image', {
         //@ts-ignore
-        uri: image.uri,
+        uri: image,
         type: 'image/jpeg',
-        name: image.uri.replace(/^.*[\\\/]/, '')
+        name: image.replace(/^.*[\\\/]/, '')
     })
 
     try {
@@ -39,6 +39,26 @@ export const uploadImageToRecipe = async (token: string, image: any, recipeId: s
                     'Authorization': 'Token ' + token,
                 },
                 body: formData
+        })
+        if (response.ok) {
+            const resData = await response.json()
+            return resData
+        }
+
+    } catch (err) {
+        console.log(err)
+    } 
+}
+
+export const getAllRecipes = async (token: string) => {
+    try {
+        const response = await fetch(baseUrl + 'recipes/recipes/', 
+            {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Token ' + token
+                },
         })
         if (response.ok) {
             const resData = await response.json()

@@ -1,5 +1,3 @@
-import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
-import { useLayoutEffect } from "react"
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import RecipeScreen from "../screens/Recipes/AllRecipes/RecipeScreen"
@@ -22,7 +20,7 @@ const TabsNavigator = () => {
             activeColor={'#fff'}
         >
             <Tab.Screen
-                name='Meal PLanner'
+                name='Meal Planning'
                 options={{ tabBarIcon: 'calendar' }}
                 component={MealPlannerScreen}
             />
@@ -31,11 +29,11 @@ const TabsNavigator = () => {
                 options={{ tabBarIcon: 'food-variant'}}
                 component={RecipeScreen}
             />
-            <Tab.Screen
+            {/* <Tab.Screen
                 name='Shopping List'
                 options={{ tabBarIcon: 'format-list-checkbox' }}
                 component={ShoppingListScreen}
-            />
+            /> */}
         </Tab.Navigator>
     );
 };
